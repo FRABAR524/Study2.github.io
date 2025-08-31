@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>StudyTwo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+
+    <!-- Left Column (Checkboxes) -->
+    <div id="left-column">
+        <label class="checkbox-label">
+            <input type="checkbox" id="showTimer" checked>
+            <span class="symbol">⏱️</span>
+            <span class="text">TIMER</span>
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" id="showMusic">
+            <span class="symbol">🎵</span>
+            <span class="text">MUSIC</span>
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" id="showNotes">
+            <span class="symbol">📝</span>
+            <span class="text">NOTES</span>
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" id="showAI">
+            <span class="symbol">🤖</span>
+            <span class="text">AI</span>
+        </label>
+    </div>
+
+    <!-- Center/Quadrants -->
+    <div id="center">
+        <!-- Timer Top-Left -->
+        <div id="timer-section" class="section">
+            <h2>TIMER</h2>
+            <input type="text" id="hours" maxlength="2" value="00"> :
+            <input type="text" id="minutes" maxlength="2" value="00"> :
+            <input type="text" id="seconds" maxlength="2" value="00">
+            <div id="timer-buttons">
+                <button id="startTimer">START</button>
+                <button id="stopTimer">STOP</button>
+                <button id="resetTimer">RESET</button>
+            </div>
+        </div>
+
+        <!-- Notes Bottom-Left -->
+        <div id="notes-section" class="section">
+            <h2>NOTES</h2>
+            <textarea id="notesBox" placeholder="Write your notes here..."></textarea>
+            <div id="notes-buttons">
+                <button id="copyNotes">COPY</button>
+                <button id="clearNotes">CLEAR</button>
+            </div>
+        </div>
+
+        <!-- Music Top-Right -->
+        <div id="music-section" class="section">
+            <h2>MUSIC</h2>
+            <select id="musicSelect">
+                <option value="rain.mp3">Rain</option>
+                <option value="ocean.mp3">Ocean</option>
+                <option value="forest.mp3">Forest</option>
+            </select>
+            <div id="music-controls">
+                <button id="playMusic">PLAY</button>
+                <button id="pauseMusic">PAUSE</button>
+                <button id="stopMusic">STOP</button>
+            </div>
+        </div>
+
+        <!-- AI Bottom-Right -->
+        <div id="ai-section" class="section">
+            <h2>AI CHAT</h2>
+            <textarea id="aiInput" placeholder="Ask something..."></textarea>
+            <button id="sendAI">SEND</button>
+            <div id="aiOutput"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
